@@ -15,7 +15,7 @@ const Footer = () => {
           <FaInstagram size={26} />
         </div>
         <p className="text-center"> 
-          Powered by <a href="">w3.css</a>
+          Created by <a href="https://github.com/JamalAhmadov">Jamal</a>
         </p>
       </div>
     </div>

@@ -1,11 +1,58 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const NavbarItem = (props) => {
-  return (
-    <div className='h-12 w-24 flex cursor-pointer items-center justify-center  hover:bg-stone-400 hover:text-black'>
-        <a className='flex items-center' href={props.page}>{props.text}{props.icon}</a>
-    </div>
-  )
-}
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-export default NavbarItem
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
+  return (
+    <div
+      className="relative inline-block"
+      onMouseEnter={toggleDropdown}
+      onMouseLeave={closeDropdown}
+    >
+      <button className="h-12 w-24 flex items-center justify-center hover:bg-stone-400 hover:text-black focus:outline-none">
+        {props.text}
+        {props.icon}
+      </button>
+      {props.hasDropdown && isDropdownOpen && (
+        <div className="absolute left-0  w-32 bg-white shadow-md">
+          <ul>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-200 text-black"
+              >
+                Merchandise
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-200 text-black"
+              >
+                Extras
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-200 text-black"
+              >
+                Media
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NavbarItem;

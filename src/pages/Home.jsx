@@ -15,14 +15,14 @@ const Home = () => {
   return (
     <div className="pt-10">
       <main>
-        <section id="home">
+        <section id="home "  >
           <Slider />
         </section>
         <section id="band" className="w-full min-h-screen flex items-center">
           <div className="lg:w-3/5 mx-auto flex flex-col gap-4 ">
             <ContentHeader title="THE BAND" text="We love music" />
-            <div>
-              <p className="text-justify text-[15px]">
+            <div className="px-2">
+              <p className="text-justify md:text-[15px] text-sm">
                 We have created a fictional band website. Lorem ipsum dolor sit
                 amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -46,14 +46,14 @@ const Home = () => {
         </section>
         <section
           id="tour"
-          className="w-full min-h-[120vh] flex items-center bg-black text-white"
+          className="w-full min-h-[120vh] flex items-center py-10 bg-black text-white"
         >
           <div className="lg:w-3/5 mx-auto flex flex-col gap-6 ">
             <ContentHeader
               title="TOUR DATES"
               text="Remember to book your tickets!"
             />
-            <div className="bg-white text-black">
+            <div className="bg-white w-full text-black">
               <div className="p-3 border-b border-gray-500">
                 <p className="text-gray-600">
                   September{" "}
@@ -77,7 +77,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 ">
               <CityCard
                 src={newyork}
                 alt="city photo"
@@ -111,7 +111,7 @@ const Home = () => {
         >
           <div className="lg:w-3/5 mx-auto flex flex-col gap-8 ">
             <ContentHeader title="CONTACT" text="Fan? Drop a note!" />
-            <div className="flex justify-between">
+            <div className="flex sm:justify-between flex-col sm:flex-row items-center gap-4">
               <Contact />
               <Form />
             </div>

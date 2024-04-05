@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Form = () => {
   return (
-    <form className="w-1/2 flex flex-col gap-3">
+    <form className="sm:w-1/2 w-[80%] flex flex-col gap-3">
       <div className="flex justify-between">
         <FormInput width="48%" placeholder="Name" type="text" />
         <FormInput width="48%" placeholder="Email" type="text" />

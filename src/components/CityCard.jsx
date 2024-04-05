@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const CityCard = (props) => {
   return (
-    <div className="w-[255px] min-h-96 bg-white text-black">
+    <div className="max-w-[255px] min-h-96 bg-white text-black">
       <div>
         <img src={props.src} alt={props.alt} />
       </div>
